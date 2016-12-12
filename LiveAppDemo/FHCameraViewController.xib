@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11542" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="FHCameraViewController">
+            <connections>
+                <outlet property="view" destination="iN0-l3-epB" id="Po5-V2-gv9"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="goback" translatesAutoresizingMaskIntoConstraints="NO" id="Mtc-Xs-gEh">
+                    <rect key="frame" x="330" y="622" width="30" height="30"/>
+                    <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.5" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="30" id="hHM-MB-dPo"/>
+                        <constraint firstAttribute="width" constant="30" id="jwK-a8-cME"/>
+                    </constraints>
+                </imageView>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="shortvideo_icon_down_switch" translatesAutoresizingMaskIntoConstraints="NO" id="DIw-f7-spA">
+                    <rect key="frame" x="15" y="622" width="30" height="30"/>
+                    <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.5" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="30" id="6pp-02-aOc"/>
+                        <constraint firstAttribute="width" constant="30" id="vc3-Wb-fIs"/>
+                    </constraints>
+                </imageView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="t3f-d0-vTI">
+                    <rect key="frame" x="0.0" y="617" width="50" height="50"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="50" id="IyZ-Nd-dxi"/>
+                        <constraint firstAttribute="height" constant="50" id="n6c-Xw-axE"/>
+                    </constraints>
+                    <connections>
+                        <action selector="toggleCapture:" destination="-1" eventType="touchUpInside" id="oh0-hU-A4N"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Yqn-Mt-icY">
+                    <rect key="frame" x="325" y="617" width="50" height="50"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="50" id="iQk-xL-qyf"/>
+                        <constraint firstAttribute="height" constant="50" id="obA-Bv-xnh"/>
+                    </constraints>
+                    <connections>
+                        <action selector="backAction:" destination="-1" eventType="touchUpInside" id="gTN-6k-fn9"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="DIw-f7-spA" secondAttribute="bottom" constant="15" id="5Vb-Wm-avU"/>
+                <constraint firstItem="DIw-f7-spA" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="15" id="Nwu-qL-5vc"/>
+                <constraint firstAttribute="bottom" secondItem="Mtc-Xs-gEh" secondAttribute="bottom" constant="15" id="Ooh-OR-rrZ"/>
+                <constraint firstAttribute="bottom" secondItem="Yqn-Mt-icY" secondAttribute="bottom" id="YgG-dg-Xde"/>
+                <constraint firstAttribute="trailing" secondItem="Mtc-Xs-gEh" secondAttribute="trailing" constant="15" id="i4R-Ps-5oh"/>
+                <constraint firstAttribute="bottom" secondItem="t3f-d0-vTI" secondAttribute="bottom" id="pcd-i6-wBc"/>
+                <constraint firstAttribute="trailing" secondItem="Yqn-Mt-icY" secondAttribute="trailing" id="qZJ-bY-xQp"/>
+                <constraint firstItem="t3f-d0-vTI" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="whq-UH-6gI"/>
+            </constraints>
+            <point key="canvasLocation" x="119.5" y="164.5"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="goback" width="64" height="64"/>
+        <image name="shortvideo_icon_down_switch" width="50" height="50"/>
+    </resources>
+</document>

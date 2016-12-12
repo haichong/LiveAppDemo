@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11542" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="FHUImageFilterViewController">
+            <connections>
+                <outlet property="view" destination="iN0-l3-epB" id="aI9-c1-wrP"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="美白" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="W8U-sr-DZH">
+                    <rect key="frame" x="15" y="632" width="40" height="20"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="20" id="LL0-DO-Ld0"/>
+                        <constraint firstAttribute="width" constant="40" id="TSE-Oe-NLz"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="磨皮" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eNV-6z-iNW">
+                    <rect key="frame" x="15" y="592" width="40" height="20"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="20" id="9kd-j3-6tf"/>
+                        <constraint firstAttribute="width" constant="40" id="nFk-ZZ-5wX"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="-1" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="pyF-j2-YdA">
+                    <rect key="frame" x="68" y="627" width="294" height="31"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="30" id="RgX-Nz-TAh"/>
+                    </constraints>
+                    <connections>
+                        <action selector="brightnessFiller:" destination="-1" eventType="valueChanged" id="WwO-e3-cg2"/>
+                    </connections>
+                </slider>
+                <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="9" translatesAutoresizingMaskIntoConstraints="NO" id="Pug-UN-aVl">
+                    <rect key="frame" x="73" y="587" width="284" height="31"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="30" id="Pjf-iA-6ht"/>
+                    </constraints>
+                    <connections>
+                        <action selector="bilateralFilter:" destination="-1" eventType="valueChanged" id="3cj-7h-Zbf"/>
+                    </connections>
+                </slider>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="W8U-sr-DZH" firstAttribute="top" secondItem="eNV-6z-iNW" secondAttribute="bottom" constant="20" id="0tS-zl-n4s"/>
+                <constraint firstItem="pyF-j2-YdA" firstAttribute="leading" secondItem="W8U-sr-DZH" secondAttribute="trailing" constant="15" id="9VT-AD-hhO"/>
+                <constraint firstItem="Pug-UN-aVl" firstAttribute="leading" secondItem="eNV-6z-iNW" secondAttribute="trailing" constant="20" id="HDJ-cQ-MF7"/>
+                <constraint firstAttribute="trailing" secondItem="Pug-UN-aVl" secondAttribute="trailing" constant="20" id="HWQ-8N-aA7"/>
+                <constraint firstItem="pyF-j2-YdA" firstAttribute="top" secondItem="Pug-UN-aVl" secondAttribute="bottom" constant="10" id="Lw2-j3-0tf"/>
+                <constraint firstItem="W8U-sr-DZH" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="15" id="WLA-wu-PY5"/>
+                <constraint firstAttribute="bottom" secondItem="W8U-sr-DZH" secondAttribute="bottom" constant="15" id="ab1-oU-EZV"/>
+                <constraint firstItem="eNV-6z-iNW" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="15" id="cgf-mm-oqx"/>
+                <constraint firstAttribute="trailing" secondItem="pyF-j2-YdA" secondAttribute="trailing" constant="15" id="kCZ-5z-BUc"/>
+                <constraint firstAttribute="bottom" secondItem="pyF-j2-YdA" secondAttribute="bottom" constant="10" id="nfj-wB-hJB"/>
+            </constraints>
+        </view>
+    </objects>
+</document>
