@@ -13,7 +13,7 @@
 		470ADAEB1D9E010A0016158C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 470ADAE91D9E010A0016158C /* LaunchScreen.storyboard */; };
 		470ADAF61D9E010A0016158C /* LiveAppDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 470ADAF51D9E010A0016158C /* LiveAppDemoTests.m */; };
 		470ADB011D9E010A0016158C /* LiveAppDemoUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 470ADB001D9E010A0016158C /* LiveAppDemoUITests.m */; };
-		470ADB101D9E01380016158C /* FHListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 470ADB0F1D9E01380016158C /* FHListViewController.m */; };
+		470ADB101D9E01380016158C /* FHLiveListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 470ADB0F1D9E01380016158C /* FHLiveListViewController.m */; };
 		470ADB571D9E0B4D0016158C /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 470ADB561D9E0B4D0016158C /* AudioToolbox.framework */; };
 		470ADB591D9E0B550016158C /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 470ADB581D9E0B550016158C /* AVFoundation.framework */; };
 		470ADB5B1D9E0B600016158C /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 470ADB5A1D9E0B600016158C /* CoreMedia.framework */; };
@@ -24,9 +24,11 @@
 		470ADB651D9E0B930016158C /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 470ADB641D9E0B930016158C /* MobileCoreServices.framework */; };
 		470ADB671D9E0B9C0016158C /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 470ADB661D9E0B9C0016158C /* OpenGLES.framework */; };
 		470ADB691D9E0BA60016158C /* VideoToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 470ADB681D9E0BA60016158C /* VideoToolbox.framework */; };
-		4737B59A1D9E10150092E586 /* FHListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4737B5991D9E10150092E586 /* FHListViewController.xib */; };
+		4737B59A1D9E10150092E586 /* FHLiveListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4737B5991D9E10150092E586 /* FHLiveListViewController.xib */; };
 		4737B59E1D9E13EC0092E586 /* FHLiveViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4737B59C1D9E13EC0092E586 /* FHLiveViewController.m */; };
 		4737B59F1D9E13EC0092E586 /* FHLiveViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4737B59D1D9E13EC0092E586 /* FHLiveViewController.xib */; };
+		476D2EBA1DFF8C0E00EA78A7 /* FHFuncationListTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 476D2EB81DFF8C0E00EA78A7 /* FHFuncationListTableViewController.m */; };
+		476D2EBB1DFF8C0E00EA78A7 /* FHFuncationListTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 476D2EB91DFF8C0E00EA78A7 /* FHFuncationListTableViewController.xib */; };
 		47706CBE1DF93AF900D420C5 /* IJKMediaFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 47706CBD1DF93AF900D420C5 /* IJKMediaFramework.framework */; };
 		477A39611DACD8C300CA003E /* FHLiveTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 477A395F1DACD8C300CA003E /* FHLiveTableViewCell.m */; };
 		477A39621DACD8C300CA003E /* FHLiveTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 477A39601DACD8C300CA003E /* FHLiveTableViewCell.xib */; };
@@ -37,7 +39,7 @@
 		47B993EF1DCB0E1C002869DF /* FHCameraView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 47B993EE1DCB0E1C002869DF /* FHCameraView.xib */; };
 		47BA42491DCB21CE0063E577 /* FHUImageFilterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 47BA42471DCB21CE0063E577 /* FHUImageFilterViewController.m */; };
 		47BA424E1DCB39090063E577 /* GPUImageBeautifyFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 47BA424D1DCB39090063E577 /* GPUImageBeautifyFilter.m */; };
-		47BA42501DCB3A140063E577 /* FHGPUImageFilterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 47BA424F1DCB3A140063E577 /* FHGPUImageFilterViewController.xib */; };
+		47BA42501DCB3A140063E577 /* FHUImageFilterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 47BA424F1DCB3A140063E577 /* FHUImageFilterViewController.xib */; };
 		47D5DC6C1DD0660200D44F80 /* FHBeautyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 47D5DC6A1DD0660200D44F80 /* FHBeautyViewController.m */; };
 		47D5DC6D1DD0660200D44F80 /* FHBeautyViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 47D5DC6B1DD0660200D44F80 /* FHBeautyViewController.xib */; };
 		47DC55441DC9D12300556247 /* FHCameraViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 47DC55421DC9D12300556247 /* FHCameraViewController.m */; };
@@ -76,8 +78,8 @@
 		470ADAFC1D9E010A0016158C /* LiveAppDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LiveAppDemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		470ADB001D9E010A0016158C /* LiveAppDemoUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LiveAppDemoUITests.m; sourceTree = "<group>"; };
 		470ADB021D9E010A0016158C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		470ADB0E1D9E01380016158C /* FHListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FHListViewController.h; sourceTree = "<group>"; };
-		470ADB0F1D9E01380016158C /* FHListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FHListViewController.m; sourceTree = "<group>"; };
+		470ADB0E1D9E01380016158C /* FHLiveListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FHLiveListViewController.h; sourceTree = "<group>"; };
+		470ADB0F1D9E01380016158C /* FHLiveListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FHLiveListViewController.m; sourceTree = "<group>"; };
 		470ADB561D9E0B4D0016158C /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		470ADB581D9E0B550016158C /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		470ADB5A1D9E0B600016158C /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
@@ -88,10 +90,13 @@
 		470ADB641D9E0B930016158C /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
 		470ADB661D9E0B9C0016158C /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
 		470ADB681D9E0BA60016158C /* VideoToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = VideoToolbox.framework; path = System/Library/Frameworks/VideoToolbox.framework; sourceTree = SDKROOT; };
-		4737B5991D9E10150092E586 /* FHListViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FHListViewController.xib; sourceTree = "<group>"; };
+		4737B5991D9E10150092E586 /* FHLiveListViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FHLiveListViewController.xib; sourceTree = "<group>"; };
 		4737B59B1D9E13EC0092E586 /* FHLiveViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FHLiveViewController.h; sourceTree = "<group>"; };
 		4737B59C1D9E13EC0092E586 /* FHLiveViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FHLiveViewController.m; sourceTree = "<group>"; };
 		4737B59D1D9E13EC0092E586 /* FHLiveViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FHLiveViewController.xib; sourceTree = "<group>"; };
+		476D2EB71DFF8C0E00EA78A7 /* FHFuncationListTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FHFuncationListTableViewController.h; sourceTree = "<group>"; };
+		476D2EB81DFF8C0E00EA78A7 /* FHFuncationListTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FHFuncationListTableViewController.m; sourceTree = "<group>"; };
+		476D2EB91DFF8C0E00EA78A7 /* FHFuncationListTableViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FHFuncationListTableViewController.xib; sourceTree = "<group>"; };
 		47706CBD1DF93AF900D420C5 /* IJKMediaFramework.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = IJKMediaFramework.framework; sourceTree = "<group>"; };
 		477A395E1DACD8C300CA003E /* FHLiveTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FHLiveTableViewCell.h; sourceTree = "<group>"; };
 		477A395F1DACD8C300CA003E /* FHLiveTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FHLiveTableViewCell.m; sourceTree = "<group>"; };
@@ -107,7 +112,7 @@
 		47BA42471DCB21CE0063E577 /* FHUImageFilterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FHUImageFilterViewController.m; sourceTree = "<group>"; };
 		47BA424C1DCB39090063E577 /* GPUImageBeautifyFilter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPUImageBeautifyFilter.h; sourceTree = "<group>"; };
 		47BA424D1DCB39090063E577 /* GPUImageBeautifyFilter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GPUImageBeautifyFilter.m; sourceTree = "<group>"; };
-		47BA424F1DCB3A140063E577 /* FHGPUImageFilterViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FHGPUImageFilterViewController.xib; sourceTree = "<group>"; };
+		47BA424F1DCB3A140063E577 /* FHUImageFilterViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FHUImageFilterViewController.xib; sourceTree = "<group>"; };
 		47D5DC691DD0660200D44F80 /* FHBeautyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FHBeautyViewController.h; sourceTree = "<group>"; };
 		47D5DC6A1DD0660200D44F80 /* FHBeautyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FHBeautyViewController.m; sourceTree = "<group>"; };
 		47D5DC6B1DD0660200D44F80 /* FHBeautyViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FHBeautyViewController.xib; sourceTree = "<group>"; };
@@ -194,9 +199,12 @@
 				470ADB521D9E0A990016158C /* Lib */,
 				477A39711DACE94D00CA003E /* AppDelegate */,
 				477A396C1DACE8E800CA003E /* Nav */,
+				476D2EB51DFF8BAC00EA78A7 /* FuncationList(功能列表) */,
 				477A396B1DACE8D200CA003E /* Main */,
-				477A39701DACE93000CA003E /* Live */,
-				47DC55401DC9D0CA00556247 /* Camera */,
+				477A39701DACE93000CA003E /* Live(播放) */,
+				47DC55401DC9D0CA00556247 /* Camera(采集) */,
+				476D2EBC1DFF8E1D00EA78A7 /* UImageFilter(滤镜) */,
+				476D2EBD1DFF8E2700EA78A7 /* Beauty(美颜) */,
 				470ADAE71D9E010A0016158C /* Assets.xcassets */,
 				470ADAE91D9E010A0016158C /* LaunchScreen.storyboard */,
 				470ADAEC1D9E010A0016158C /* Info.plist */,
@@ -258,6 +266,36 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		476D2EB51DFF8BAC00EA78A7 /* FuncationList(功能列表) */ = {
+			isa = PBXGroup;
+			children = (
+				476D2EB71DFF8C0E00EA78A7 /* FHFuncationListTableViewController.h */,
+				476D2EB81DFF8C0E00EA78A7 /* FHFuncationListTableViewController.m */,
+				476D2EB91DFF8C0E00EA78A7 /* FHFuncationListTableViewController.xib */,
+			);
+			name = "FuncationList(功能列表)";
+			sourceTree = "<group>";
+		};
+		476D2EBC1DFF8E1D00EA78A7 /* UImageFilter(滤镜) */ = {
+			isa = PBXGroup;
+			children = (
+				47BA42461DCB21CE0063E577 /* FHUImageFilterViewController.h */,
+				47BA42471DCB21CE0063E577 /* FHUImageFilterViewController.m */,
+				47BA424F1DCB3A140063E577 /* FHUImageFilterViewController.xib */,
+			);
+			name = "UImageFilter(滤镜)";
+			sourceTree = "<group>";
+		};
+		476D2EBD1DFF8E2700EA78A7 /* Beauty(美颜) */ = {
+			isa = PBXGroup;
+			children = (
+				47D5DC691DD0660200D44F80 /* FHBeautyViewController.h */,
+				47D5DC6A1DD0660200D44F80 /* FHBeautyViewController.m */,
+				47D5DC6B1DD0660200D44F80 /* FHBeautyViewController.xib */,
+			);
+			name = "Beauty(美颜)";
+			sourceTree = "<group>";
+		};
 		477A396B1DACE8D200CA003E /* Main */ = {
 			isa = PBXGroup;
 			children = (
@@ -300,21 +338,21 @@
 		477A396F1DACE90F00CA003E /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				470ADB0E1D9E01380016158C /* FHListViewController.h */,
-				470ADB0F1D9E01380016158C /* FHListViewController.m */,
-				4737B5991D9E10150092E586 /* FHListViewController.xib */,
+				470ADB0E1D9E01380016158C /* FHLiveListViewController.h */,
+				470ADB0F1D9E01380016158C /* FHLiveListViewController.m */,
+				4737B5991D9E10150092E586 /* FHLiveListViewController.xib */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
 		};
-		477A39701DACE93000CA003E /* Live */ = {
+		477A39701DACE93000CA003E /* Live(播放) */ = {
 			isa = PBXGroup;
 			children = (
 				4737B59B1D9E13EC0092E586 /* FHLiveViewController.h */,
 				4737B59C1D9E13EC0092E586 /* FHLiveViewController.m */,
 				4737B59D1D9E13EC0092E586 /* FHLiveViewController.xib */,
 			);
-			name = Live;
+			name = "Live(播放)";
 			sourceTree = "<group>";
 		};
 		477A39711DACE94D00CA003E /* AppDelegate */ = {
@@ -335,14 +373,14 @@
 			path = GPUImageBeautifyFilter;
 			sourceTree = "<group>";
 		};
-		47DC55401DC9D0CA00556247 /* Camera */ = {
+		47DC55401DC9D0CA00556247 /* Camera(采集) */ = {
 			isa = PBXGroup;
 			children = (
 				47DC55481DC9E57800556247 /* Controller */,
 				47DC55461DC9E56000556247 /* View */,
 				47DC55471DC9E56800556247 /* Model */,
 			);
-			name = Camera;
+			name = "Camera(采集)";
 			sourceTree = "<group>";
 		};
 		47DC55461DC9E56000556247 /* View */ = {
@@ -368,12 +406,6 @@
 				47DC55411DC9D12300556247 /* FHCameraViewController.h */,
 				47DC55421DC9D12300556247 /* FHCameraViewController.m */,
 				47ADF1D41DC9F2F1001A59E8 /* FHCameraViewController.xib */,
-				47BA42461DCB21CE0063E577 /* FHUImageFilterViewController.h */,
-				47BA42471DCB21CE0063E577 /* FHUImageFilterViewController.m */,
-				47BA424F1DCB3A140063E577 /* FHGPUImageFilterViewController.xib */,
-				47D5DC691DD0660200D44F80 /* FHBeautyViewController.h */,
-				47D5DC6A1DD0660200D44F80 /* FHBeautyViewController.m */,
-				47D5DC6B1DD0660200D44F80 /* FHBeautyViewController.xib */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -492,15 +524,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				470ADAEB1D9E010A0016158C /* LaunchScreen.storyboard in Resources */,
+				476D2EBB1DFF8C0E00EA78A7 /* FHFuncationListTableViewController.xib in Resources */,
 				47ADF1D51DC9F2F1001A59E8 /* FHCameraViewController.xib in Resources */,
 				470ADAE81D9E010A0016158C /* Assets.xcassets in Resources */,
 				47B993EF1DCB0E1C002869DF /* FHCameraView.xib in Resources */,
-				4737B59A1D9E10150092E586 /* FHListViewController.xib in Resources */,
+				4737B59A1D9E10150092E586 /* FHLiveListViewController.xib in Resources */,
 				477A396A1DACE37F00CA003E /* FHNavigationController.xib in Resources */,
 				477A39621DACD8C300CA003E /* FHLiveTableViewCell.xib in Resources */,
 				4737B59F1D9E13EC0092E586 /* FHLiveViewController.xib in Resources */,
 				47D5DC6D1DD0660200D44F80 /* FHBeautyViewController.xib in Resources */,
-				47BA42501DCB3A140063E577 /* FHGPUImageFilterViewController.xib in Resources */,
+				47BA42501DCB3A140063E577 /* FHUImageFilterViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -577,8 +610,9 @@
 				4737B59E1D9E13EC0092E586 /* FHLiveViewController.m in Sources */,
 				47DC55441DC9D12300556247 /* FHCameraViewController.m in Sources */,
 				470ADAE01D9E010A0016158C /* AppDelegate.m in Sources */,
+				476D2EBA1DFF8C0E00EA78A7 /* FHFuncationListTableViewController.m in Sources */,
 				477A39611DACD8C300CA003E /* FHLiveTableViewCell.m in Sources */,
-				470ADB101D9E01380016158C /* FHListViewController.m in Sources */,
+				470ADB101D9E01380016158C /* FHLiveListViewController.m in Sources */,
 				47BA424E1DCB39090063E577 /* GPUImageBeautifyFilter.m in Sources */,
 				477A39691DACE37F00CA003E /* FHNavigationController.m in Sources */,
 				477A39651DACDC5C00CA003E /* FHLiveModel.m in Sources */,

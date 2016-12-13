@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface FHListViewController : UIViewController
+@interface FHLiveListViewController : UIViewController
 
 @end

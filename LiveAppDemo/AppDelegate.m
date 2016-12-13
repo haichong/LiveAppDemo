@@ -8,10 +8,7 @@
 
 #import "AppDelegate.h"
 #import "FHNavigationController.h"
-#import "FHListViewController.h"
-#import "FHCameraViewController.h"
-#import "FHUImageFilterViewController.h"
-#import "FHBeautyViewController.h"
+#import "FHFuncationListTableViewController.h"
 
 @interface AppDelegate ()
 
@@ -23,20 +20,10 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     
     self.window = [[UIWindow alloc]initWithFrame:[[UIScreen mainScreen] bounds]];
-    // 直播:播放
-    FHListViewController *vc = [[FHListViewController alloc] init];
-    FHNavigationController *nav = [[FHNavigationController alloc] initWithRootViewController:vc];
-
-    /*
-    FHCameraViewController *cameraVC = [FHCameraViewController new];
-    FHUImageFilterViewController *filterVC = [FHUImageFilterViewController new];
-    FHBeautyViewController *beautyVC = [FHBeautyViewController new];
-   
-    FHNavigationController *cameraNaC =[[FHNavigationController alloc] initWithRootViewController:cameraVC];
-    FHNavigationController *filterNav = [[FHNavigationController alloc] initWithRootViewController:filterVC];
-    FHNavigationController *beautyNav = [[FHNavigationController alloc] initWithRootViewController:beautyVC];
-   */
-    self.window.rootViewController = nav;
+    FHFuncationListTableViewController *funcationVC = [FHFuncationListTableViewController new];
+    FHNavigationController *funcationNaV = [[FHNavigationController alloc] initWithRootViewController:funcationVC];
+    self.window.rootViewController = funcationVC;
+    self.window.rootViewController = funcationNaV;
     
     [self.window makeKeyAndVisible];
     return YES;

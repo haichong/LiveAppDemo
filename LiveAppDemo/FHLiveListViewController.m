@@ -6,19 +6,19 @@
 //  Copyright © 2016年 fuhang. All rights reserved.
 //
 
-#import "FHListViewController.h"
+#import "FHLiveListViewController.h"
 #import <AFNetworking.h>
 #import "FHLiveViewController.h"
 #import "FHLiveTableViewCell.h"
 #import "FHLiveModel.h"
 
-@interface FHListViewController ()<UITableViewDelegate, UITableViewDataSource>
+@interface FHLiveListViewController ()<UITableViewDelegate, UITableViewDataSource>
 
 @property(strong,nonatomic) NSMutableArray *lives;
 @property (weak, nonatomic) IBOutlet UITableView *tableview;
 @end
 
-@implementation FHListViewController
+@implementation FHLiveListViewController
 
 -(NSMutableArray *)lives{
     
