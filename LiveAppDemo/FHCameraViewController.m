@@ -9,7 +9,6 @@
 #import "FHCameraViewController.h"
 #import <AVFoundation/AVFoundation.h>
 #import "FHUImageFilterViewController.h"
-#import "FHCameraView.h"
 
 @interface FHCameraViewController ()<AVCaptureVideoDataOutputSampleBufferDelegate, AVCaptureAudioDataOutputSampleBufferDelegate>
 {
@@ -49,7 +48,7 @@
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
 }
-// 捕获音视频
+// 采集
 - (void)setupCaputureVideo {
     // 1.创建捕获对话，必须要强引用，否则会释放
     _captureSession = [[AVCaptureSession alloc] init];
@@ -57,12 +56,12 @@
     AVCaptureDevice *videoDevice = [self getVideoDevice:AVCaptureDevicePositionFront];
     // 3.获取声音设备
     AVCaptureDevice *audioDevice = [AVCaptureDevice defaultDeviceWithMediaType:AVMediaTypeAudio];
-    // 4.创建对应视屏设备输入对象
+    // 4.创建对应视频设备输入对象
     _currentVideoDeviceInput = [AVCaptureDeviceInput deviceInputWithDevice:videoDevice error:nil];
     // 5.创建对应音频设备输入对象
-     AVCaptureDeviceInput *audioDeviceInput = [AVCaptureDeviceInput deviceInputWithDevice:audioDevice error:nil];
+    AVCaptureDeviceInput *audioDeviceInput = [AVCaptureDeviceInput deviceInputWithDevice:audioDevice error:nil];
     // 6.添加到会话中 注意：最好要判断是否能添加输入，会话不能添加空的
-    // 6.1 添加视屏
+    // 6.1 添加视频
     if ([_captureSession canAddInput:_currentVideoDeviceInput]) {
         [_captureSession addInput:_currentVideoDeviceInput];
     }
@@ -70,36 +69,38 @@
     if ([_captureSession canAddInput:audioDeviceInput]) {
         [_captureSession addInput:audioDeviceInput];
     }
-    // 7.捕获视屏数据输出设备
+    // 7.捕获视频数据输出设备
     AVCaptureVideoDataOutput *videoOutput = [[AVCaptureVideoDataOutput alloc] init];
+    //7.1 设置代理， 捕获视频样品数据
     dispatch_queue_t videoQueue = dispatch_queue_create("Video Capure Queue", DISPATCH_QUEUE_SERIAL);
     [videoOutput setSampleBufferDelegate: self queue:videoQueue];
+    // 8.设置音频数据输出设备
+    AVCaptureAudioDataOutput *audioOutput = [[AVCaptureAudioDataOutput alloc] init];
+    // 8.1 设置代理，捕获音频样品数据 注意：必须是串行队列才能捕获到数据,而且不能为空
+    dispatch_queue_t audioQueue = dispatch_queue_create("Audio Capure Queue", DISPATCH_QUEUE_SERIAL);
+    [audioOutput setSampleBufferDelegate:self queue:audioQueue];
+    // 9.添加到会话中 注意：最好要判断是否能添加输入，会话不能添加空的
     if ([_captureSession canAddOutput:videoOutput]) {
         [_captureSession addOutput:videoOutput];
     }
-    // 8.设置音频数据输出设备
-    AVCaptureAudioDataOutput *audioOutput = [[AVCaptureAudioDataOutput alloc] init];
-    // 8.1 设置代理，捕获视屏样品数据 注意：必须是串行队列才能捕获到数据,而且不能为空
-    dispatch_queue_t audioQueue = dispatch_queue_create("Audio Capure Queue", DISPATCH_QUEUE_SERIAL);
-    [audioOutput setSampleBufferDelegate:self queue:audioQueue];
-    if ([_captureSession canAddOutput:audioOutput]) {
+       if ([_captureSession canAddOutput:audioOutput]) {
         [_captureSession addOutput:audioOutput];
     }
-    // 9.获取视屏输入与输出连接，用于分辨音视频数据
+    // 10.获取视屏输入与输出连接，用于分辨音视频数据
     _videoConnection = [videoOutput connectionWithMediaType:AVMediaTypeVideo];
-    // 10.添加视屏预览图层
+    // 11.添加视屏预览图层
     _previewdLayer = [AVCaptureVideoPreviewLayer layerWithSession:_captureSession];
     _previewdLayer.frame = [UIScreen mainScreen].bounds;
     [self.view.layer  insertSublayer:_previewdLayer atIndex:0];
+    // 12.开启会话
     [_captureSession startRunning];
-    
-    FHCameraView *cameraView = [[FHCameraView alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, 40)];
-    [self.view addSubview:cameraView];
 }
-// 指定摄像头方向获取摄像头
+// 根据摄像头方向获取摄像头
 - (AVCaptureDevice *)getVideoDevice: (AVCaptureDevicePosition)position {
+    // 获取所有摄像头：前置和后置
     NSArray *devices = [AVCaptureDevice devicesWithMediaType:AVMediaTypeVideo];
     for (AVCaptureDevice *device in devices) {
+        // 返回指定方向的摄像头
         if (device.position == position) {
             return device;
         }
@@ -107,31 +108,35 @@
     return nil;
 }
 #pragma mark - AVCaptureVideoDataOutputSampleBufferDelegate
-// 获取输入设备数据，有可能是音频，有可能是视屏
+// 获取输出设备数据，有可能是音频，有可能是视频
 - (void)captureOutput:(AVCaptureOutput *)captureOutput didOutputSampleBuffer:(CMSampleBufferRef)sampleBuffer fromConnection:(AVCaptureConnection *)connection {
-//    if (_videoConnection == connection) {
-//        NSLog(@"采集到视屏数据");
-//    }else {
-//        NSLog(@"采集到音频数据");
-//    }
+    // 根据连接的输出对象判断输出的是视频还是音频数据
+    if (_videoConnection == connection) {
+        NSLog(@"采集到视频数据");
+    }else {
+        NSLog(@"采集到音频数据");
+    }
 }
 #pragma mark - 切换摄像头
 - (IBAction)toggleCapture:(id)sender {
-    // 获取当前设备方向
+    // 1.获取当前设备方向
     AVCaptureDevicePosition cureentPosition = _currentVideoDeviceInput.device.position;
-    // 获取需要改变的方向
+    // 2.获取需要改变的方向
     AVCaptureDevicePosition togglePosition = (cureentPosition == AVCaptureDevicePositionFront ? AVCaptureDevicePositionBack : AVCaptureDevicePositionFront);
-    // 获取需要改变的摄像头设备
+    // 3.获取需要改变的摄像头设备
     AVCaptureDevice *toggleDevice = [self getVideoDevice:togglePosition];
-    // 获取需要改变的摄像头输入设备
+    // 4.获取需要改变的摄像头输入设备
     AVCaptureDeviceInput *toggleDeviceInput = [[AVCaptureDeviceInput alloc] initWithDevice:toggleDevice error:nil];
+    // 5.停止会话，否则会有一瞬间的白屏
     [_captureSession stopRunning];
-    // 移除之前的摄像头输入设备
+    // 6.移除之前的摄像头输入设备,否则会崩溃，因为会话里只能有一个摄像头设备
     [_captureSession removeInput:_currentVideoDeviceInput];
-    // 添加新的摄像头输入设备
+    // 7.添加新的摄像头输入设备
     [_captureSession addInput:toggleDeviceInput];
+    // 8.重新开始会话
     [_captureSession startRunning];
     // 记录当前摄像头输入设备
+    //9.重新开始
     _currentVideoDeviceInput = toggleDeviceInput;
 }
 #pragma mark - 聚集光标
@@ -143,8 +148,8 @@
     CGPoint cameraPoint = [_previewdLayer captureDevicePointOfInterestForPoint:point];
     // 设置聚集光标的位置
     [self setFocusCursorWithPoint:point];
-    [self focusWithMode:AVCaptureFocusModeAutoFocus exposureMode:AVCaptureExposureModeAutoExpose atPoint:cameraPoint];
     // 设置聚焦
+    [self focusWithMode:AVCaptureFocusModeAutoFocus exposureMode:AVCaptureExposureModeAutoExpose atPoint:cameraPoint];
 }
  // 设置聚集光标的位置
 - (void)setFocusCursorWithPoint: (CGPoint)point {

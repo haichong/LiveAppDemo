@@ -36,14 +36,12 @@
 		477A39691DACE37F00CA003E /* FHNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 477A39671DACE37F00CA003E /* FHNavigationController.m */; };
 		477A396A1DACE37F00CA003E /* FHNavigationController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 477A39681DACE37F00CA003E /* FHNavigationController.xib */; };
 		47ADF1D51DC9F2F1001A59E8 /* FHCameraViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 47ADF1D41DC9F2F1001A59E8 /* FHCameraViewController.xib */; };
-		47B993EF1DCB0E1C002869DF /* FHCameraView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 47B993EE1DCB0E1C002869DF /* FHCameraView.xib */; };
 		47BA42491DCB21CE0063E577 /* FHUImageFilterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 47BA42471DCB21CE0063E577 /* FHUImageFilterViewController.m */; };
 		47BA424E1DCB39090063E577 /* GPUImageBeautifyFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 47BA424D1DCB39090063E577 /* GPUImageBeautifyFilter.m */; };
 		47BA42501DCB3A140063E577 /* FHUImageFilterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 47BA424F1DCB3A140063E577 /* FHUImageFilterViewController.xib */; };
 		47D5DC6C1DD0660200D44F80 /* FHBeautyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 47D5DC6A1DD0660200D44F80 /* FHBeautyViewController.m */; };
 		47D5DC6D1DD0660200D44F80 /* FHBeautyViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 47D5DC6B1DD0660200D44F80 /* FHBeautyViewController.xib */; };
 		47DC55441DC9D12300556247 /* FHCameraViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 47DC55421DC9D12300556247 /* FHCameraViewController.m */; };
-		47DC554B1DC9E5A200556247 /* FHCameraView.m in Sources */ = {isa = PBXBuildFile; fileRef = 47DC554A1DC9E5A200556247 /* FHCameraView.m */; };
 		C048B6D5F5DB1B95BE62487B /* libPods-LiveAppDemo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7245FEAAABE82B328E0E5CB3 /* libPods-LiveAppDemo.a */; };
 /* End PBXBuildFile section */
 
@@ -107,7 +105,6 @@
 		477A39671DACE37F00CA003E /* FHNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FHNavigationController.m; sourceTree = "<group>"; };
 		477A39681DACE37F00CA003E /* FHNavigationController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FHNavigationController.xib; sourceTree = "<group>"; };
 		47ADF1D41DC9F2F1001A59E8 /* FHCameraViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FHCameraViewController.xib; sourceTree = "<group>"; };
-		47B993EE1DCB0E1C002869DF /* FHCameraView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FHCameraView.xib; sourceTree = "<group>"; };
 		47BA42461DCB21CE0063E577 /* FHUImageFilterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FHUImageFilterViewController.h; sourceTree = "<group>"; };
 		47BA42471DCB21CE0063E577 /* FHUImageFilterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FHUImageFilterViewController.m; sourceTree = "<group>"; };
 		47BA424C1DCB39090063E577 /* GPUImageBeautifyFilter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPUImageBeautifyFilter.h; sourceTree = "<group>"; };
@@ -118,8 +115,6 @@
 		47D5DC6B1DD0660200D44F80 /* FHBeautyViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FHBeautyViewController.xib; sourceTree = "<group>"; };
 		47DC55411DC9D12300556247 /* FHCameraViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FHCameraViewController.h; sourceTree = "<group>"; };
 		47DC55421DC9D12300556247 /* FHCameraViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FHCameraViewController.m; sourceTree = "<group>"; };
-		47DC55491DC9E5A200556247 /* FHCameraView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FHCameraView.h; sourceTree = "<group>"; };
-		47DC554A1DC9E5A200556247 /* FHCameraView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FHCameraView.m; sourceTree = "<group>"; };
 		7245FEAAABE82B328E0E5CB3 /* libPods-LiveAppDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-LiveAppDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A26972DD2A9D79B735566C45 /* Pods-LiveAppDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LiveAppDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-LiveAppDemo/Pods-LiveAppDemo.release.xcconfig"; sourceTree = "<group>"; };
 		A3E6DF0420A2ED8B93DB8E94 /* Pods-LiveAppDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LiveAppDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LiveAppDemo/Pods-LiveAppDemo.debug.xcconfig"; sourceTree = "<group>"; };
@@ -386,9 +381,6 @@
 		47DC55461DC9E56000556247 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				47DC55491DC9E5A200556247 /* FHCameraView.h */,
-				47DC554A1DC9E5A200556247 /* FHCameraView.m */,
-				47B993EE1DCB0E1C002869DF /* FHCameraView.xib */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -527,7 +519,6 @@
 				476D2EBB1DFF8C0E00EA78A7 /* FHFuncationListTableViewController.xib in Resources */,
 				47ADF1D51DC9F2F1001A59E8 /* FHCameraViewController.xib in Resources */,
 				470ADAE81D9E010A0016158C /* Assets.xcassets in Resources */,
-				47B993EF1DCB0E1C002869DF /* FHCameraView.xib in Resources */,
 				4737B59A1D9E10150092E586 /* FHLiveListViewController.xib in Resources */,
 				477A396A1DACE37F00CA003E /* FHNavigationController.xib in Resources */,
 				477A39621DACD8C300CA003E /* FHLiveTableViewCell.xib in Resources */,
@@ -606,7 +597,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				47DC554B1DC9E5A200556247 /* FHCameraView.m in Sources */,
 				4737B59E1D9E13EC0092E586 /* FHLiveViewController.m in Sources */,
 				47DC55441DC9D12300556247 /* FHCameraViewController.m in Sources */,
 				470ADAE01D9E010A0016158C /* AppDelegate.m in Sources */,
