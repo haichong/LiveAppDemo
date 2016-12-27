@@ -22,22 +22,18 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 
-    // 创建视屏源
-    GPUImageVideoCamera *videoCamera  = [[GPUImageVideoCamera alloc] initWithSessionPreset:AVCaptureSessionPresetHigh cameraPosition:AVCaptureDevicePositionFront];
-    videoCamera.outputImageOrientation = UIInterfaceOrientationPortrait;
-    _videoCamera = videoCamera;
+    // 创建视频源
+    _videoCamera  = [[GPUImageVideoCamera alloc] initWithSessionPreset:AVCaptureSessionPresetHigh cameraPosition:AVCaptureDevicePositionFront];
+    _videoCamera.outputImageOrientation = UIInterfaceOrientationPortrait;
     
     // 创建最终预览View
-    GPUImageView *captureVideoPreview = [[GPUImageView alloc] initWithFrame:self.view.bounds];
-    captureVideoPreview.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
-    [self.view insertSubview:captureVideoPreview atIndex:0];
-    _captureVideoPreview = captureVideoPreview;
+   _captureVideoPreview = [[GPUImageView alloc] initWithFrame:self.view.bounds];
+    _captureVideoPreview.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
+    [self.view insertSubview:_captureVideoPreview atIndex:0];
     
-    // 设置处理链
-    [_videoCamera addTarget:captureVideoPreview];
-    // 必须调用startCameraCapture,底层才会把采集到的视屏源，渲染到GPUImageView中，就显示了
+    [_videoCamera addTarget:_captureVideoPreview];
     // 开始采集视屏
-    [videoCamera startCameraCapture];
+    [_videoCamera startCameraCapture];
     
 }
 - (IBAction)isOnBeautyAction:(id)sender {
@@ -51,6 +47,7 @@
         // 设置GPUImage处理链，从数据源 => 滤镜 => 最终界面效果
         [_videoCamera addTarget:beautifyFilter];
         [beautifyFilter addTarget:_captureVideoPreview];
+       
     }else {
         // 关闭美颜
         [_videoCamera removeAllTargets];

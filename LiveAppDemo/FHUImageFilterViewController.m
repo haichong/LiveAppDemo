@@ -11,8 +11,11 @@
 
 @interface FHUImageFilterViewController ()
 
+// 视屏源
 @property (nonatomic, strong)GPUImageVideoCamera *videoCamera;
+// 磨皮滤镜
 @property (nonatomic, weak)GPUImageBilateralFilter *bilateralFilter;
+// 美白滤镜
 @property (nonatomic, weak)GPUImageBrightnessFilter *brightnessFilter;
 @end
 
@@ -23,10 +26,11 @@
     
     // 创建视屏源
     /*
-     sessionPreset : 屏幕分辨率；AVCaptureSessionPresetHigh会自适应分辨率
-     cameraPosition： 摄像头方向
+     * sessionPreset : 屏幕分辨率
+     * cameraPosition： 摄像头位置
      **/
     GPUImageVideoCamera *videoCamera = [[GPUImageVideoCamera alloc] initWithSessionPreset:AVCaptureSessionPresetHigh cameraPosition:AVCaptureDevicePositionFront];
+    // 设置输出图像方向
     videoCamera.outputImageOrientation = UIInterfaceOrientationPortrait;
     self.videoCamera = videoCamera;
     
@@ -37,18 +41,22 @@
     
     // 创建滤镜：磨皮，美白，组合滤镜
     GPUImageFilterGroup *groupFilter = [[GPUImageFilterGroup alloc] init];
+   
     // 磨皮滤镜
     GPUImageBilateralFilter *bilateraFilter = [[GPUImageBilateralFilter alloc] init];
     [groupFilter addTarget:bilateraFilter];
     _bilateralFilter = bilateraFilter;
+    
     // 美白滤镜
     GPUImageBrightnessFilter *brightnessFilter = [[GPUImageBrightnessFilter alloc] init];
     [groupFilter addTarget:brightnessFilter];
     _brightnessFilter = brightnessFilter;
+    
     // 设置滤镜组链
     [bilateraFilter addTarget:brightnessFilter];
     [groupFilter setInitialFilters:@[bilateraFilter]];
     groupFilter.terminalFilter = brightnessFilter;
+    
     // 设置GPUImage的响应链， 从数据源 ==> 滤镜 ==> 最终界面效果
     [videoCamera addTarget:groupFilter];
     [groupFilter addTarget:captureVideoPreview];
@@ -58,12 +66,15 @@
 }
 - (IBAction)brightnessFiller:(id)sender {
     UISlider *slider = (UISlider *)sender;
+    // (亮度)brightness取值范围[-1,1],0为正常状态
     _brightnessFilter.brightness = slider.value;
 }
 - (IBAction)bilateralFilter:(id)sender {
     UISlider *slider = (UISlider *)sender;
-    CGFloat maxValue = 10;
-    [_bilateralFilter setDistanceNormalizationFactor:maxValue - slider.value];
+    CGFloat maxValue = 100;
+    //平滑因子(distanceNormalizationFactor)值越小，磨皮效果越好，但是必须大于1.
+    _bilateralFilter.distanceNormalizationFactor = maxValue - slider.value;
+    NSLog(@"distanceNormalizationFactor=%f",_bilateralFilter.distanceNormalizationFactor);
 }
 
 - (void)viewWillAppear:(BOOL)animated {
