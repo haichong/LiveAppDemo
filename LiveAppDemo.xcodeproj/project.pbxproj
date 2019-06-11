@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		00611CFC22AF992200E76BA6 /* IJKMediaFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 00611CFB22AF992200E76BA6 /* IJKMediaFramework.framework */; };
 		470ADADD1D9E010A0016158C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 470ADADC1D9E010A0016158C /* main.m */; };
 		470ADAE01D9E010A0016158C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 470ADADF1D9E010A0016158C /* AppDelegate.m */; };
 		470ADAE81D9E010A0016158C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 470ADAE71D9E010A0016158C /* Assets.xcassets */; };
@@ -63,6 +64,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		00611CFB22AF992200E76BA6 /* IJKMediaFramework.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = IJKMediaFramework.framework; sourceTree = "<group>"; };
 		470ADAD81D9E010A0016158C /* LiveAppDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LiveAppDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		470ADADC1D9E010A0016158C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		470ADADE1D9E010A0016158C /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -125,6 +127,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				00611CFC22AF992200E76BA6 /* IJKMediaFramework.framework in Frameworks */,
 				470ADB691D9E0BA60016158C /* VideoToolbox.framework in Frameworks */,
 				470ADB671D9E0B9C0016158C /* OpenGLES.framework in Frameworks */,
 				470ADB651D9E0B930016158C /* MobileCoreServices.framework in Frameworks */,
@@ -191,7 +194,6 @@
 		470ADADA1D9E010A0016158C /* LiveAppDemo */ = {
 			isa = PBXGroup;
 			children = (
-				470ADB521D9E0A990016158C /* Lib */,
 				477A39711DACE94D00CA003E /* AppDelegate */,
 				477A396C1DACE8E800CA003E /* Nav */,
 				476D2EB51DFF8BAC00EA78A7 /* FuncationList(功能列表) */,
@@ -200,6 +202,7 @@
 				47DC55401DC9D0CA00556247 /* Camera(采集) */,
 				476D2EBC1DFF8E1D00EA78A7 /* UImageFilter(滤镜) */,
 				476D2EBD1DFF8E2700EA78A7 /* Beauty(美颜) */,
+				470ADB521D9E0A990016158C /* Libs */,
 				470ADAE71D9E010A0016158C /* Assets.xcassets */,
 				470ADAE91D9E010A0016158C /* LaunchScreen.storyboard */,
 				470ADAEC1D9E010A0016158C /* Info.plist */,
@@ -234,12 +237,13 @@
 			path = LiveAppDemoUITests;
 			sourceTree = "<group>";
 		};
-		470ADB521D9E0A990016158C /* Lib */ = {
+		470ADB521D9E0A990016158C /* Libs */ = {
 			isa = PBXGroup;
 			children = (
+				00611CFB22AF992200E76BA6 /* IJKMediaFramework.framework */,
 				47BA424B1DCB39090063E577 /* GPUImageBeautifyFilter */,
 			);
-			name = Lib;
+			name = Libs;
 			sourceTree = "<group>";
 		};
 		470ADB551D9E0B4D0016158C /* Frameworks */ = {
@@ -473,7 +477,7 @@
 				TargetAttributes = {
 					470ADAD71D9E010A0016158C = {
 						CreatedOnToolsVersion = 8.0;
-						DevelopmentTeam = JZM66EF4CG;
+						DevelopmentTeam = ZGA994BAL6;
 						ProvisioningStyle = Automatic;
 					};
 					470ADAF01D9E010A0016158C = {
@@ -495,6 +499,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 			);
@@ -751,7 +756,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				DEVELOPMENT_TEAM = JZM66EF4CG;
+				DEVELOPMENT_TEAM = ZGA994BAL6;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/LiveAppDemo",
@@ -773,7 +778,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				DEVELOPMENT_TEAM = JZM66EF4CG;
+				DEVELOPMENT_TEAM = ZGA994BAL6;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/LiveAppDemo",

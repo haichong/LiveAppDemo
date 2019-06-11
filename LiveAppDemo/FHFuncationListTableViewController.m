@@ -81,32 +81,29 @@
     return [(AppDelegate *)[UIApplication sharedApplication].delegate window];
 }
 // 直播:播放
-- (void)setupLiveListVCToRootVC {
-    
+- (void)setupLiveListVCToRootVC
+{
     FHLiveListViewController *vc = [[FHLiveListViewController alloc] init];
-    FHNavigationController *nav = [[FHNavigationController alloc] initWithRootViewController:vc];
-    [[self getAppDelegate] setRootViewController:nav];
+    [self.navigationController pushViewController:vc animated:YES];
 }
 // 采集
-- (void)setupCameraVCToRootVC {
+- (void)setupCameraVCToRootVC
+{
     
     FHCameraViewController *cameraVC = [FHCameraViewController new];
-    FHNavigationController *cameraNav =[[FHNavigationController alloc] initWithRootViewController:cameraVC];
-    [[self getAppDelegate] setRootViewController:cameraNav];
+    [self.navigationController pushViewController:cameraVC animated:YES];
 }
 // 滤镜
-- (void)setupFilterVCToRootVC {
-    
+- (void)setupFilterVCToRootVC
+{
     FHUImageFilterViewController *filterVC = [FHUImageFilterViewController new];
-    FHNavigationController *filterNav = [[FHNavigationController alloc] initWithRootViewController:filterVC];
-    [[self getAppDelegate] setRootViewController:filterNav];
+    [self.navigationController pushViewController:filterVC animated:YES];
 }
 // 美颜
-- (void)setupBeautyVCToRootVC{
-    
+- (void)setupBeautyVCToRootVC
+{
     FHBeautyViewController *beautyVC = [FHBeautyViewController new];
-    FHNavigationController *beautyNav = [[FHNavigationController alloc] initWithRootViewController:beautyVC];
-    [[self getAppDelegate] setRootViewController:beautyNav];
+    [self.navigationController pushViewController:beautyVC animated:YES];
 }
 
 /*

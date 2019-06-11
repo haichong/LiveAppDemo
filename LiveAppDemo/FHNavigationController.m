@@ -14,7 +14,8 @@
 
 @implementation FHNavigationController
 
-- (void)viewDidLoad {
+- (void)viewDidLoad
+{
     [super viewDidLoad];
     [self.navigationBar setBackgroundImage:[UIImage imageNamed:@"global_tittle"] forBarMetrics:UIBarMetricsDefault];
 }
