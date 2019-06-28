@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		00611CFC22AF992200E76BA6 /* IJKMediaFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 00611CFB22AF992200E76BA6 /* IJKMediaFramework.framework */; };
+		00611D0022AFA80F00E76BA6 /* IJKMediaFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 00611CFF22AFA80F00E76BA6 /* IJKMediaFramework.framework */; };
 		470ADADD1D9E010A0016158C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 470ADADC1D9E010A0016158C /* main.m */; };
 		470ADAE01D9E010A0016158C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 470ADADF1D9E010A0016158C /* AppDelegate.m */; };
 		470ADAE81D9E010A0016158C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 470ADAE71D9E010A0016158C /* Assets.xcassets */; };
@@ -64,7 +64,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		00611CFB22AF992200E76BA6 /* IJKMediaFramework.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = IJKMediaFramework.framework; sourceTree = "<group>"; };
+		00611CFF22AFA80F00E76BA6 /* IJKMediaFramework.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = IJKMediaFramework.framework; sourceTree = "<group>"; };
 		470ADAD81D9E010A0016158C /* LiveAppDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LiveAppDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		470ADADC1D9E010A0016158C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		470ADADE1D9E010A0016158C /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -127,7 +127,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				00611CFC22AF992200E76BA6 /* IJKMediaFramework.framework in Frameworks */,
+				00611D0022AFA80F00E76BA6 /* IJKMediaFramework.framework in Frameworks */,
 				470ADB691D9E0BA60016158C /* VideoToolbox.framework in Frameworks */,
 				470ADB671D9E0B9C0016158C /* OpenGLES.framework in Frameworks */,
 				470ADB651D9E0B930016158C /* MobileCoreServices.framework in Frameworks */,
@@ -240,7 +240,7 @@
 		470ADB521D9E0A990016158C /* Libs */ = {
 			isa = PBXGroup;
 			children = (
-				00611CFB22AF992200E76BA6 /* IJKMediaFramework.framework */,
+				00611CFF22AFA80F00E76BA6 /* IJKMediaFramework.framework */,
 				47BA424B1DCB39090063E577 /* GPUImageBeautifyFilter */,
 			);
 			name = Libs;
